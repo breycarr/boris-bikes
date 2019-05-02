@@ -3,12 +3,16 @@ require_relative 'bike'
 class DockingStation
 
   def release_bike
-      bike = Bike.new
-      return bike
+      Bike.new
+      
   end
 
   def dock(bike)
-    "Bike is now stored"
+    @bike = bike
+  end
+
+  def status
+    @bike
   end
 
 end
