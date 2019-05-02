@@ -7,8 +7,8 @@ class DockingStation
       return bike
   end
 
-  def dock
-  	
+  def dock(bike)
+    "Bike is now stored"
   end
 
 end
