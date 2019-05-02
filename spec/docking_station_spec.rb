@@ -21,7 +21,14 @@ describe DockingStation do
   describe "#dock" do
    it { is_expected.to respond_to(:dock) }
    it 'stores a bike when docked' do
-     expect(docking_station.dock(bike)).to eq("Bike is now stored")
+     expect(docking_station.dock(bike)).to eq(bike)
    end
+  end
+
+  describe "#status" do
+  	it "tells us if there is a bike in the docking station" do
+  	#bike = subject.release_bike #=> subject = { station = DockingStation.new}
+  	expect(docking_station.status).to eq(bike)
+    end
   end
 end
