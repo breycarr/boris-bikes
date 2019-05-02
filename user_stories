@@ -9,3 +9,8 @@ If the bike is working, the docking station will release the bike
 
 Bike <-- working? --> true/false
 DockingStation <-- release_bike --> a Bike
+
+Raising Exceptions
+
+User - docking staton - bike
+user <-- release_bike --> docking station <-- bike --> true or false --> error raised if no bikes

@@ -9,13 +9,17 @@ require 'docking_station'
 
 describe DockingStation do
   docking_station = DockingStation.new
-  bike = docking_station.release_bike
+  # bike =  docking_station.release_bike
+  bike = Bike.new
  describe "releases bike" do
   it { is_expected.to respond_to(:release_bike) }
 
   it "provides a bike that  responds to #working?" do
       expect(bike).to be_working # => the be_x can be used to replace any method with a ?
       #expect(bike).to respond_to(:working?)
+  end
+  it "only releases a bike if a bike is docked" do
+    expect { docking_station.release_bike }.to raise_error("no bikes available")
   end
  end
   describe "#dock" do
