@@ -25,10 +25,10 @@ describe DockingStation do
    end
   end
 
-  describe "#status" do
+  describe "#bike" do
   	it "tells us if there is a bike in the docking station" do
   	#bike = subject.release_bike #=> subject = { station = DockingStation.new}
-  	expect(docking_station.status).to eq(bike)
+  	expect(docking_station.bike).to eq(bike)
     end
   end
 end
